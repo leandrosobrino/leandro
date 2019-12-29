@@ -26,3 +26,7 @@ Route::get('/header', function () {
 Route::get('/footer', function(){
     return view('footer');
   });
+
+  Route::get('/trabajosRealizados', function(){
+    return view('trabajosRealizados');
+  });

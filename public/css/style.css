@@ -5,8 +5,10 @@ body{
    padding: 0px;
    margin:0px;
 }
-
+/*HEADER ------------------------------------------------*/
 #contenedor{
+  position: absolute;
+  top:0px;
   
   display:flex;
  flex-wrap: wrap;
@@ -59,6 +61,7 @@ body{
 .tipografiaMenu{
   text-decoration: none;
   color: black;
+  padding-right:30px ;
 }
 
 #listaDeMenu{
@@ -87,57 +90,250 @@ margin-bottom:10px;
 .meServ{
   padding-left: 30px;
 }
-a{
-  padding-right: 30px;
 
-}
+/* FIN CSS HEADER ----------------------------------------------*/
 
-#empezamos{
-  /* background-color: red; */
+/* CSS HOME  */
+
+.empezamos{
+ /*   background-color: red;  */
   width: 100%;
   height: 100%;
+  /* position: relative; */
+  display: inline-block;
+  text-align: center;
+}
+
+.contenedorDeImagen{
   position: relative;
   display: inline-block;
   text-align: center;
-
-  /*top: 0;
-  left: 0;
-  transform: none;
-  position: relative;
-  width: 100%;
-  height: auto*/
+  
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
 }
 .textoCentrado{
   position: absolute;
+  top: 500px;
+  /* left: 100px; */
+  z-index: 10;
+  /* display: flex; */
   color:white;
-  top: 450px;
   width: 100%;
-/*   border-radius: 10px; */
-  padding-left: 10px;
-  padding-right: 10px;
+  /*padding-left: 10px;
+  padding-right: 10px; */
   background:rgba(54, 52, 52, 0.3);
   font-size: 30px;
-  font-family: 'Lato', sans-serif;
-  text-transform: uppercase;
+  font-family: 'Lato', sans-serif; 
+/*   text-transform: uppercase;*/
 }
 
 
 
 .imagen{
- 
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 110px;
   transform: none;
   position: relative;
   width: 100%;
   height: auto;
+  /*EFECTOS*/
+  transition : -webkit-filter 1s ease-out;
+}
+.imagen:hover{
+  -webkit-filter:grayscale(0);
+  filter: saturate(200%);
+} /*FIN DE EFECTOS*/
+
+.textoContenedorDeImagen{
+  background-color: red;
+  padding-right: 30px;
+
 }
 
-footer{
+.contenedorDelCarrusel{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+
+  margin-top: 5px;
+  
+  background-color: rgba(54, 52, 52, 0.3);
   width: 100%;
-  height: 100px;
-  border: 5px solid #2c3e50;
-  position: fixed;
-  bottom: 0px;
-
+  height: auto;
 }
 
+.tituloDeNissan{
+  font-size: 70px;
+}
+ .contenedorDeNissan{
+   display: flex;
+  
+   flex-wrap: wrap;
+   width: 20%;
+   height: auto;
+ }
 
+ .fotoNissan{
+   width: 100%;
+   height: 100%;
+   border-radius: 100px;
+ }
+/* FIN CSS HOME------------------------------------------- */
+
+
+/*
+  --------------------------------------------------------------
+  FOOTER
+  --------------------------------------------------------------
+  */
+  footer{
+margin-top: 10px;  
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px grey;
+    border-bottom: 1px grey;
+
+    background-color: rgb(25, 31, 34);
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .footer_info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .empresa{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+  }
+
+  .empresa p a{
+    text-decoration: none;
+    color: grey;
+    font-family: 'Dosis', sans-serif;
+  }
+  .empresa p a:hover{color: white;font-family: 'Dosis', sans-serif;}
+  .nosotros_footer{
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+  }
+
+  .ayuda{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+  }
+
+  .ayuda p a{
+    text-decoration: none;
+    color: grey;
+    font-family: 'Dosis', sans-serif;
+  }
+  .ayuda p a:hover{text-decoration: none;color: white;font-family: 'Dosis', sans-serif;}
+  .ayuda_footer{
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .categoria{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+  }
+  .categoria p a{
+    text-decoration: none;
+    color: grey;
+    font-family: 'Dosis', sans-serif;
+  }
+  .categoria p a:hover{
+    text-decoration: none;
+    color: white;
+    font-family: 'Dosis', sans-serif;}
+  .categoria_footer{
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .mpagos{
+    display: flex;
+    flex-direction: column;
+    justify-content:top;
+    align-items:center;
+  }
+  .mpagos p a{
+    text-decoration: none;
+    color: grey;
+    font-family: 'Dosis', sans-serif;
+  }
+
+  .mpagos img{
+    height: 20px;
+    width: 35px;
+    padding-right:5px;
+    margin-top: 10px;
+  }
+
+  .tarjetas-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .ultima-tarjeta{
+    padding: 0;
+  }
+
+  .tarjetas-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .mpagos p a:hover{
+    text-decoration: none;
+    color: white;
+    font-family: 'Dosis', sans-serif;
+  }
+  .mpagos_footer{
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .copyright{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: 0.5px solid white;
+    padding-top: 10px;
+    width: 100%
+
+  }
+  .copyright p{
+    text-decoration: none;
+    color: grey;
+    font-family: 'Dosis', sans-serif;
+  }
+
+  .ultimoTextoFooter{
+margin: 0px;
+  }
+
+  .copyright p:hover{
+    text-decoration: none;
+    color: white;
+    font-family: 'Dosis', sans-serif;
+  }
+
+  
